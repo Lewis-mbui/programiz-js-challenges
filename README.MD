@@ -15,6 +15,12 @@ I aim to complete **5 challenges per day** — one from each difficulty level (B
 
 ---
 
+## 📅 Daily Progress
+
+- [Day 01](daily-progress/day-01.md) – ⏳ In progress
+
+---
+
 ## 📊 Challenge Tracker
 
 - Beginner: 0
