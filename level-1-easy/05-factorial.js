@@ -1,3 +1,5 @@
+// Write a function to calculate the factorial of a number.
+
 console.log(calculateFactorial(5));
 
 /*

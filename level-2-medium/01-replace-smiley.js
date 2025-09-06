@@ -1,3 +1,5 @@
+//  Write a function to replace smiley faces ":)" with sad faces ":("
+
 const input = ":) :) :) All smiles here :)";
 
 console.log(replaceSmiley(input));

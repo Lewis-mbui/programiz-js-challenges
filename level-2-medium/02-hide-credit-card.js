@@ -1,3 +1,5 @@
+// Write a function to hide a credit card number.
+
 const cardNumber = "1234567890123456"
 
 console.log(hideCreditCard(cardNumber));

@@ -1,3 +1,5 @@
+// Write a function to add even numbers from 1 to n (inclusive).
+
 const n = 10;
 console.log(addEvenNumbers(n));
 
