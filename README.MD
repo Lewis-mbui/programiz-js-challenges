@@ -14,15 +14,9 @@ I aim to complete around **10 challenges per day** — several from each difficu
 
 ---
 
-## 📅 Daily Progress
-
-- [Day 01](daily-progress/day-01.md) – ⏳ In progress
-
----
-
 ## 📊 Challenge Tracker
 
-- Easy: 3
-- Medium: 1
+- Easy: 6
+- Medium: 3
 - Hard: 0
 - Expert: 0
