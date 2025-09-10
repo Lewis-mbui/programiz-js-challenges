@@ -18,5 +18,5 @@ I aim to complete around **10 challenges per day** — several from each difficu
 
 - Easy: 6
 - Medium: 5
-- Hard: 0
+- Hard: 2
 - Expert: 0

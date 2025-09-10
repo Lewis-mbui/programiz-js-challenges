@@ -1,3 +1,5 @@
+// Write a function to move all zeros in an array to the end.
+
 const arr1 = [0, 6, 0, 2, 0];
 const arr2 = [6, 0, 7, 4, 0, 2, 8];
 console.log(moveZerosToEnd(arr1));
