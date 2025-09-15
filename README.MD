@@ -1,7 +1,7 @@
 # Programiz JavaScript Challenges
 
 This repository contains my solutions to JavaScript challenges from [Programiz](https://www.programiz.com/javascript).  
-I aim to complete around **10 challenges per day** — several from each difficulty level (Easy → Expert).
+I aim to complete around **4 challenges per day** — one from each difficulty level (Easy → Expert).
 
 ---
 
@@ -18,5 +18,5 @@ I aim to complete around **10 challenges per day** — several from each difficu
 
 - Easy: 9
 - Medium: 9
-- Hard: 3
+- Hard: 4
 - Expert: 0
