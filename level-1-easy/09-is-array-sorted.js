@@ -5,7 +5,7 @@ console.log(isArraySorted(arr));
 
 
 function isArraySorted(arr) {
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length - 1; i++) {
     if (arr[i + 1] < arr[i]) return "Not Sorted"
   }
 
