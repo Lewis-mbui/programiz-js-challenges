@@ -26,7 +26,7 @@ function blackjackWinner(player1, player2) {
   if(score2 > score1) return "Player2";
   return "Draw";
 }
-/*
+
 function blackjackWinner(player1, player2) {
   // Helper to validate and compute sum of two-card hand
   function handSum(hand, label) {
@@ -62,4 +62,3 @@ console.log(blackjackWinner([10, 9], [10, 8])); // Player 1 wins  (19 vs 18)
 console.log(blackjackWinner([10, 12], [9, 9])); // Player 2 wins  (22 -> bust vs 18)
 console.log(blackjackWinner([10, 7], [8, 9]));  // Draw (same score) (17 vs 17)
 console.log(blackjackWinner([12, 10], [11, 11])); // Draw (both bust) (22 vs 22)
-*/
