@@ -93,3 +93,87 @@ function nextPermutationBruteForce(nums) {
   // Step 4: Return the next permutation (or wrap to smallest)
   return perms[index + 1] || perms[0];
 }
+
+
+// Function to generate permutations iteratively
+function getPermutationsIterative(arr) {
+  // Start with one empty permutation
+  let result = [[]];
+
+  // Process each number in the input array
+  for (let num of arr) {
+    const newPermutations = [];
+
+    // For each existing permutation
+    for (let perm of result) {
+      // Insert the current number into every possible position
+      for (let i = 0; i <= perm.length; i++) {
+        const newPerm = [...perm.slice(0, i), num, ...perm.slice(i)];
+        newPermutations.push(newPerm);
+      }
+    }
+
+    // Update result with all new permutations generated in this round
+    result = newPermutations;
+  }
+
+  return result;
+}
+
+// Example usage:
+console.log(getPermutationsIterative([1, 2, 3]));
+// Output:
+// [
+//   [1, 2, 3],
+//   [1, 3, 2],
+//   [2, 1, 3],
+//   [2, 3, 1],
+//   [3, 1, 2],
+//   [3, 2, 1]
+// ]
+
+
+
+// Function to generate all permutations of an array
+function getPermutations(arr) {
+  // Base case:
+  // If there's only one element in the array,
+  // the only permutation is the array itself
+  if (arr.length === 1) {
+    return [arr];
+  }
+
+  const result = []; // To store all permutations
+
+  // Loop through every element in the array
+  for (let i = 0; i < arr.length; i++) {
+    // Choose the current element as the "fixed" one
+    const fixedElement = arr[i];
+
+    // Get the remaining elements (excluding the fixed one)
+    const remaining = arr.slice(0, i).concat(arr.slice(i + 1));
+
+    // Recursively get all permutations of the remaining elements
+    const smallerPermutations = getPermutations(remaining);
+
+    // Add the fixed element in front of each smaller permutation
+    for (let perm of smallerPermutations) {
+      result.push([fixedElement, ...perm]);
+    }
+  }
+
+  // Return all permutations found
+  return result;
+}
+
+// Example usage:
+console.log(getPermutations([1, 2, 3]));
+// Output:
+// [
+//   [1, 2, 3],
+//   [1, 3, 2],
+//   [2, 1, 3],
+//   [2, 3, 1],
+//   [3, 1, 2],
+//   [3, 2, 1]
+// ]
