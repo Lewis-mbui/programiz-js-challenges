@@ -16,19 +16,12 @@ console.log(findFulcrum(arr));
 function findFulcrum(arr) {
   for (let i = 1; i < arr.length - 1; i++) {
     const currentNum = arr[i];
-    // console.log(currentNum);
 
     const leftSum = arr.slice(0, i)
       .reduce((a, b) => a + b);
 
     const rightSum = arr.slice(i + 1, arr.length)
       .reduce((a, b) => a + b);
-
-    // if (i === 2) {
-    //   console.log(arr.slice(i + 1, arr.length));
-    //   console.log(leftSum);
-    //   console.log(rightSum);
-    // }
 
     if (leftSum === rightSum) return currentNum;
   }
