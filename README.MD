@@ -16,7 +16,7 @@ I aim to complete around **4 challenges per day** — one from each difficulty l
 
 ## 📊 Challenge Tracker
 
-- Easy: 16
-- Medium: 16
-- Hard: 10
+- Easy: 23
+- Medium: 23
+- Hard: 15
 - Expert: 0
