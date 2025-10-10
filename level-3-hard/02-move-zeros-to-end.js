@@ -10,46 +10,9 @@ function moveZerosToEnd(arr) {
 }
 
 /*
-function moveZerosToEnd(arr) {
-  // We are at the first index and aiming
-  // to move to last index
-  let checkIndex = 0;
-  let moveIndex = arr.length - 1;
-
-  // move from checkIndex to moveIndex
-  while (checkIndex < moveIndex) {
-    //If there is a 0 where we are check if target has 0
-    if (arr[checkIndex] === 0){
-      if (arr[moveIndex] === 0) {
-        moveIndex-- // target has 0 so update the index
-      } else {
-        // if target index is not a 0 shift the 
-        // number to that position and update target
-        shiftRight(arr, checkIndex, moveIndex);
-        moveIndex--;
-      }
-    } else {
-      // if there is no 0 where we are
-      // update the check index
-      checkIndex++;
-    }
-  }
-  return arr;
-}
-
-function shiftRight(arr,originIndex, destinationIndex) {
-  // continue swapping values until the indices match
-  while(originIndex !== destinationIndex) {
-    let a = arr[originIndex];
-    arr[originIndex] = arr[originIndex + 1];
-    arr[originIndex + 1] = a;
-    originIndex++;
-  }
-}
-
-
-function moveZerosToEnd(arr) {
+function moveZerosToEnd(array) {
   let insertPos = 0;
+  const arr = [...array];
 
   // Step 1: move all non-zero elements forward
   for (let i = 0; i < arr.length; i++) {
@@ -66,7 +29,6 @@ function moveZerosToEnd(arr) {
     insertPos++;
   }
 
-  console.log(arr);
+  return arr;
 }
-
 */

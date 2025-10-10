@@ -70,6 +70,7 @@ function checkAchillesNumber(n) {
   return "Achilles";
 }
 
+
 function checkAchillesNumberOptimized(n) {
   // --- Helper: GCD for two numbers ---
   const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));

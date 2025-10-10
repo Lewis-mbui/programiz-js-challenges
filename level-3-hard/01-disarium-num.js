@@ -1,3 +1,11 @@
+/*
+A Disarium number is a number in which the sum of its 
+digits powered with their respective position is equal 
+to the original number.
+
+e.g 89 --> 8^1 + 9^2 = 89
+*/
+
 const num = 598;
 console.log(checkDisarium(num));
 
