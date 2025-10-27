@@ -11,8 +11,8 @@ function checkPasswordStrength(password) {
     "`", "~"
   ];
 
-  let hasNumber, hasSpecialChar, 
-    hasLowerCase, hasUpperCase = false;
+  let hasNumber = false, hasSpecialChar = false, 
+    hasLowerCase = false, hasUpperCase = false;
 
   const chars = password.split('');
 

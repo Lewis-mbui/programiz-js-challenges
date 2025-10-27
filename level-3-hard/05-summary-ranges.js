@@ -7,6 +7,10 @@
 // and for the input: [1, 2, 3, 4, 5, 8, 14, 16, 17, 18, 43, 42, 41, 40]
 // output: ['1->5', '8', '14', '16->18', '43->40']
 
+const nums = [34, 41, 42, 43, 15, 16, 17];
+
+console.log(summaryRanges(nums));
+
 function summaryRanges(nums) {
   const output = [];  // stores the final list of ranges
   let start = 0;      // index where the current range begins

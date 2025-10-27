@@ -35,3 +35,27 @@ function invertColor(hexColor) {
 
   return output;
 }
+
+/*
+function invertColor(hexColor) {
+  const hexToDec = hex => parseInt(hex, 16);
+  const decToHex = dec => dec.toString(16).padStart(2, '0');
+
+  let output = '#';
+  const color = hexColor.startsWith('#') ? hexColor.slice(1) : hexColor;
+
+  for (let i = 0; i < color.length; i += 2) {
+    const value = hexToDec(color.slice(i, i + 2));
+    const inverted = 255 - value;
+    output += decToHex(inverted).toUpperCase();
+  }
+
+  return output;
+}
+
+// Test
+console.log(invertColor("#123456")); // #EDCBA9
+console.log(invertColor("#FFFFFF")); // #000000
+console.log(invertColor("#000000")); // #FFFFFF
+
+*/
