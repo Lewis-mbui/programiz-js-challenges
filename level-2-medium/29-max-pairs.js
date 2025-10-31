@@ -19,7 +19,6 @@ function maxPairs(arr) {
     .reduce((prev, value) => {
       return prev + Math.floor(value / 2);
     }, 0);
-  
 }
 
 /*
