@@ -39,3 +39,25 @@ function mergeAndSortArrays(array1, array2) {
 
   return output;
 }
+
+// BUBBLE SORT ALGORITHM
+/*
+function bubbleSort(arr) {
+  const output = [...arr];
+  let n = output.length;
+  let swapped;
+
+  do {
+    swapped = false;
+    for (let i = 0; i < n - 1; i++) {
+      if (output[i] > output[i + 1]) {
+        [output[i], output[i + 1]] = [output[i + 1], output[i]];
+        swapped = true;
+      }
+    }
+    n--;
+  } while (swapped);
+
+  return output;
+}
+*/ 
