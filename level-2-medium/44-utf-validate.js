@@ -9,43 +9,68 @@
 // 4. 4-byte character: Starts with 11110 followed by 3
 //    bytes starting with 10 e.g "11110xxx 10xxxxxx 10xxxxxx 10xxxxxx"
 
-// const data = [237, 130, 129]
+const data = [237, 130, 129];
+// const data = [65, 122];
 // const data = [388, 272];
-const data = [197, 130, 1];
+// const data = [723, 12];
+// const data = [197, 130, 1];
 console.log(validUtf8(data));
 
 function validUtf8(data) {
   if (data.length === 0 || data.length > 4) return false;
 
-  const validFirstTwoBits = (arr) => {
-    return arr.every((str) => str.slice(0, 2) === '10');
+   const isValidChar = (str) => {
+    const first = str[0]
+    const firstThree = str.slice(0, 3);
+    const firstFour = str.slice(0, 4);
+    const firstFive = str.slice(0, 5);
+
+    return (first === '0' || firstThree === '110'
+      || firstFour === '1110' || firstFive === '11110'
+    );
+  }
+
+  const restValid = (arr) => {
+    return arr.every((str) => {
+      return isValidChar(str) || str.slice(0, 2) === '10';
+    })
   }
 
   const arr = data.map((num) => {
-    return num.toString(2).padStart(8, 0);
-  })
+    return num.toString(2).padStart(8, '0');
+  });
 
-  if (arr.length === 1)
-    return arr[0][0] === '0';
+  if (arr.length === 1) return isValidChar(arr[0]);
 
-  if (arr.length === 2) {
-    const first = arr[0].slice(0, 3);
-    const restValid = validFirstTwoBits([...arr.slice(1)])
-
-    return (first === '110' && restValid);
-  }
-
-  if (arr.length === 3) {
-    const first = arr[0].slice(0, 4);
-    const restValid = validFirstTwoBits([...arr.slice(1)]);
-
-    return (first === '1110' && restValid);
-  }
-
-  if (arr.length === 4) {
-    const first = arr.slice(0, 5);
-    const restValid = validFirstTwoBits([...arr.slice(1)]);
-
-    return (first === '11110' && restValid);
-  }
+  return isValidChar(arr[0]) && restValid(arr.slice(1));
 }
+
+/*
+function validUtf8(data) {
+  const bytes = data.map(n => n.toString(2).padStart(8, '0'));
+
+  let i = 0;
+
+  while (i < bytes.length) {
+    const b = bytes[i];
+
+    let count = 0;
+
+    if (b[0] === '0') count = 1;
+    else if (b.startsWith('110')) count = 2;
+    else if (b.startsWith('1110')) count = 3;
+    else if (b.startsWith('11110')) count = 4;
+    else return false;
+
+    // Check continuation bytes
+    for (let j = 1; j < count; j++) {
+      if (i + j >= bytes.length) return false;
+      if (!bytes[i + j].startsWith('10')) return false;
+    }
+
+    i += count;
+  }
+
+  return true;
+}
+*/
