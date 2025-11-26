@@ -18,3 +18,34 @@ function hcf(num1, num2) {
 
   return maxFactor;
 }
+
+/*
+function hcfEuclidean(a, b) {
+  while (b !== 0) {
+    let temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a;
+}
+
+console.log(hcfEuclidean(12, 18)); // 6
+*/
+
+/*
+function hcfRecursive(a, b) {
+  if (b === 0) return a;
+  return hcfRecursive(b, a % b);
+}
+
+console.log(hcfRecursive(12, 18)); // 6
+*/
+
+/*
+function hcfMultiple(...numbers) {
+  const hcfTwo = (a, b) => b === 0 ? a : hcfTwo(b, a % b);
+  return numbers.reduce((acc, num) => hcfTwo(acc, num));
+}
+
+console.log(hcfMultiple(12, 18, 24)); // 6
+*/

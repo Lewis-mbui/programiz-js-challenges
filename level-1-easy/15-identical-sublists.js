@@ -7,11 +7,28 @@ const list2 = [3, 1];
 console.log(checkIdenticalSublists(list1, list2));
 
 function checkIdenticalSublists(list1, list2) {
-  let isIdentical = true;
-
-  for (let i = 0; i < list1.length; i++) {
-    if (list1[i] !== list2[i])
-      isIdentical = false;
+  // First, check if lengths are equal
+  if (list1.length !== list2.length) {
+    return "Not Identical";
   }
-  return isIdentical ? "Identical" : "Not identical";
+
+  // Compare elements one by one
+  for (let i = 0; i < list1.length; i++) {
+    if (list1[i] !== list2[i]) {
+      return "Not Identical";
+    }
+  }
+
+  // All elements matched
+  return "Identical";
 }
+
+/*
+function checkIdenticalSublists(list1, list2) {
+  if (list1.length !== list2.length) return "Not Identical";
+
+  return list1.every((val, index) => val === list2[index])
+    ? "Identical"
+    : "Not Identical";
+}
+*/

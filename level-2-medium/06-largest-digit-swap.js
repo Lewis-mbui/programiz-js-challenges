@@ -22,6 +22,7 @@ function findLargest(num) {
     }
 
     // if we found a strictly larger digit to the right, swap and return
+    // if equal no need to swap
     if (maxIndex !== -1 && digits[maxIndex] > digits[i]) {
       [digits[i], digits[maxIndex]] = [digits[maxIndex], digits[i]];
       return Number(digits.join(''));

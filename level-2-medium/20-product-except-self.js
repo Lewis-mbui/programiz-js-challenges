@@ -29,10 +29,3 @@ function productExceptSelf(arr) {
 
   return output;
 }
-
-function productExceptSelf2(arr) {
-    return arr.map((currentNum) => {
-        const filteredArr = arr.filter(el => el !== currentNum)
-        return filteredArr.reduce((acc, curr) => acc * curr, 1)
-    })
-}

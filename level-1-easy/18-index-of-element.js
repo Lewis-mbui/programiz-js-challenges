@@ -13,17 +13,12 @@ function findElementIndex(arr, element) {
 
 /*
 function findElementIndex(arr, element) {
-  let foundIndex = -1;
-
   for (let i = 0; i < arr.length; i++) {
     const val = arr[i];
 
-    if (val === element) {
-      foundIndex = i;
-      break;
-    }
+    if (val === element) return i;
   }
 
-  return foundIndex;
+  return -1;
 }
 */
