@@ -10,7 +10,7 @@ function replaceVowels(str, ch) {
   const vowels = 'aeiouAEIOU';
   let result = '';
 
-  for (char of str) {
+  for (let char of str) {
     if (vowels.includes(char)) result += ch;
     else result += char;
   }
