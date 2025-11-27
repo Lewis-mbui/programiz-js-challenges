@@ -10,23 +10,6 @@
 const language = "Zulu";
 console.log(greetUser(language));
 
-
-function greetUser(language) {
-  const greetings = {
-    english: 'Hello',
-    french: 'Bonjour',
-    spanish: 'Hola',
-    italian: 'Ciao'
-  }
-
-  language = language.toLowerCase();
-
-  return greetings[language]
-    ? greetings[language]
-    : 'Hello';
-}
-
-/*
 function greetUser(language) {
   if (typeof language !== "string") return "Hello";
 
@@ -40,4 +23,3 @@ function greetUser(language) {
   const key = language.trim().toLowerCase();
   return greetings[key] || "Hello";
 }
-*/
