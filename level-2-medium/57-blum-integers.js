@@ -63,3 +63,24 @@ function isBlumInteger(n) {
   return false;
 }
 */
+
+/*
+const isPrime = n => {
+  if (n < 2) return false;
+  for (let i = 2; i * i <= n; i++)
+    if (n % i === 0) return false;
+  return true;
+};
+
+const isBlumInteger = n => {
+  for (let p = 3; p * p <= n; p += 2) {
+    if (n % p === 0) {
+      const q = n / p;
+      return p !== q &&
+             isPrime(p) && isPrime(q) &&
+             p % 4 === 3 && q % 4 === 3;
+    }
+  }
+  return false;
+};
+*/
