@@ -39,31 +39,6 @@ function isBlumInteger(n) {
   return false;
 }
 
-
-/* 
-function isBlumInteger(n) {
-  const isPrime = x => {
-    if (x < 2) return false;
-    for (let i = 2; i * i <= x; i++)
-      if (x % i === 0) return false;
-    return true;
-  };
-
-  const isFourThreePrime = x => isPrime(x) && x % 4 === 3;
-
-  for (let p = 2; p * p <= n; p++) {
-    if (n % p === 0) {
-      const q = n / p;
-      if (p !== q && isFourThreePrime(p) && isFourThreePrime(q)) {
-        return true;
-      }
-    }
-  }
-
-  return false;
-}
-*/
-
 /*
 const isPrime = n => {
   if (n < 2) return false;
