@@ -24,3 +24,16 @@ function checkPronic(num) {
       return found || (number * (number + 1) === num);
     }, false) ? "Pronic" : "Not Pronic";
 }
+
+// OPTIMIZED
+/* 
+function checkPronic(num) {
+  for (let i = 1; i * i <= num; i++) {
+    if (num % i === 0) {
+      if (num / i === i + 1) return 'Pronic'
+    }
+  }
+  
+  return 'Not Pronic';
+}
+*/
