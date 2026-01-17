@@ -5,29 +5,6 @@
 const str = "A biG aPple";
 console.log(swapCaseFirstLast(str));
 
-function swapCaseFirstLast(str) {
-  const words = str.split(' ');
-
-  return words.map((word) => {
-    const firstChar = word[0];
-    const lastChar = word[word.length - 1];
-    let newWord = ""
-
-    if (firstChar.toUpperCase() === firstChar)
-      newWord += firstChar.toLowerCase();
-    else newWord += firstChar.toUpperCase();
-
-    newWord += word.slice(1, word.length - 1);
-
-    if (lastChar.toUpperCase() === lastChar && word.length > 1)
-      newWord += lastChar.toLowerCase();
-    else if (word.length > 1) newWord += lastChar.toUpperCase();
-
-    return newWord;
-  }).join(' ');
-}
-
-/*
 function swapCaseIntermediate(str) {
   const toggleCase = ch => 
     ch === ch.toLowerCase() ? ch.toUpperCase() : ch.toLowerCase();
@@ -46,7 +23,6 @@ function swapCaseIntermediate(str) {
     })
     .join(" ");
 }
-*/
 
 /*
 const swapCaseAdvanced = (str) => {
