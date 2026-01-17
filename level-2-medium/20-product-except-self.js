@@ -13,6 +13,21 @@ const arr = [1, 2, 3, 4];
 console.log(productExceptSelf(arr));
 
 function productExceptSelf(arr) {
+    const result = [];
+    
+    for (let i = 0; i < arr.length; i++) {
+      let product = 1;
+      for (let j = 0; j < arr.length; j++) {
+          if (j !== i) product *= arr[j];
+      }
+      result.push(product);
+    }
+    
+    return result;
+}
+
+/*
+function productExceptSelf(arr) {
   const output = [];
 
   if (arr.length === 1) return [1];
@@ -29,3 +44,4 @@ function productExceptSelf(arr) {
 
   return output;
 }
+*/
