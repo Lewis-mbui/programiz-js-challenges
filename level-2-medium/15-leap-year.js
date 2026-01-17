@@ -10,6 +10,12 @@ const year = 2000;
 console.log(checkLeapYear(year));
 
 function checkLeapYear(year) {
+  const isLeap = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+  return isLeap ? "Leap" : "Noleap";
+}
+
+/*
+function checkLeapYear(year) {
   if ((year % 4 === 0) && (year % 100 !== 0))
     return "Leap";
 
@@ -17,11 +23,5 @@ function checkLeapYear(year) {
     return "Leap";
 
   return "Noleap";
-}
-
-/*
-function checkLeapYear(year) {
-  const isLeap = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
-  return isLeap ? "Leap" : "Noleap";
 }
 */
