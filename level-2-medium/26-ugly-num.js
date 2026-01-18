@@ -8,22 +8,6 @@ const num = 2;
 console.log(isUgly(num));
 
 function isUgly(num) {
-  let factor = 2;
-
- while (num > 1) {
-  if (num % factor === 0) {
-    if (factor > 5)  return "Not Ugly";
-    num = num / factor;
-    continue;
-  }
-  factor++;
- }
-
- return "Ugly";
-}
-
-/*
-function isUgly(num) {
   if (num <= 0) return "Not Ugly";
 
   while (num % 2 === 0) num /= 2;
@@ -32,4 +16,3 @@ function isUgly(num) {
 
   return num === 1 ? "Ugly" : "Not Ugly";
 }
-*/
