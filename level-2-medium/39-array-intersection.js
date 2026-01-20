@@ -10,25 +10,8 @@ const arr1 = [10, 20, 30, 40];
 const arr2 = [30, 40, 50, 60];
 console.log(arrayIntersection(arr1, arr2));
 
-function arrayIntersection(arr1, arr2) {
-  const arr = [...arr1, ...arr2];
-  const freq = {};
-  const result = [];
-
-  for (let i = 0; i < arr.length; i++) {
-    const num = arr[i];
-    freq[num] = (freq[num] || 0) + 1;
-  }
-
-  for (key in freq) {
-    if (freq[key] > 1) result.push(+key);
-  }
-
-  return result;
-}
-
 // BEGINNER VERSION
-/*
+
 function arrayIntersection(arr1, arr2) {
   const result = [];
 
@@ -42,8 +25,6 @@ function arrayIntersection(arr1, arr2) {
 
   return result;
 }
-
-*/
 
 // ADVANCED: SETS
 /*
