@@ -2,7 +2,29 @@
 const password = "Pass";
 console.log(checkPasswordStrength(password));
 
+function checkPasswordStrength(password) {
+  let hasNumber = false;
+  let hasSpecialChar = false;
+  let hasLowerCase = false;
+  let hasUpperCase = false;
 
+  for (let char of password) {
+    if (/[0-9]/.test(char)) hasNumber = true;
+    else if (/[a-z]/.test(char)) hasLowerCase = true;
+    else if (/[A-Z]/.test(char)) hasUpperCase = true;
+    else hasSpecialChar = true;  // everything else
+  }
+
+  if (password.length >= 8 && hasNumber && hasSpecialChar && hasLowerCase && hasUpperCase) {
+    return "Strong";
+  }
+  if (password.length >= 6 && hasNumber && (hasLowerCase || hasUpperCase)) {
+    return "Medium";
+  }
+  return "Weak";
+}
+
+/* 
 function checkPasswordStrength(password) {
   const specialChars = [
     "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", 
@@ -39,29 +61,6 @@ function checkPasswordStrength(password) {
   if (chars.length >= 6 && hasNumber && (hasUpperCase || hasLowerCase))
     return "Medium";
   
-  return "Weak";
-}
-
-/* 
-function checkPasswordStrength(password) {
-  let hasNumber = false;
-  let hasSpecialChar = false;
-  let hasLowerCase = false;
-  let hasUpperCase = false;
-
-  for (let char of password) {
-    if (/[0-9]/.test(char)) hasNumber = true;
-    else if (/[a-z]/.test(char)) hasLowerCase = true;
-    else if (/[A-Z]/.test(char)) hasUpperCase = true;
-    else hasSpecialChar = true;  // everything else
-  }
-
-  if (password.length >= 8 && hasNumber && hasSpecialChar && hasLowerCase && hasUpperCase) {
-    return "Strong";
-  }
-  if (password.length >= 6 && hasNumber && (hasLowerCase || hasUpperCase)) {
-    return "Medium";
-  }
   return "Weak";
 }
 */
