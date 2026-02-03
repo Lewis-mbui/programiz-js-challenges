@@ -1,3 +1,6 @@
+// Write a function to calculate the sum of ASCII values 
+// of characters in a string.
+
 const str = "Code";
 console.log(calculateAsciiSum(str));
 
