@@ -14,22 +14,6 @@ const arr = [3, 1, 5, 2, 4, 6, -1];
 console.log(findFulcrum(arr));
 
 function findFulcrum(arr) {
-  for (let i = 1; i < arr.length - 1; i++) {
-    const currentNum = arr[i];
-
-    const leftSum = arr.slice(0, i)
-      .reduce((a, b) => a + b);
-
-    const rightSum = arr.slice(i + 1, arr.length)
-      .reduce((a, b) => a + b);
-
-    if (leftSum === rightSum) return currentNum;
-  }
-
-  return -1;
-}
-
-function findFulcrum2(arr) {
   let total = arr.reduce((acc,cur) => acc + cur, 0);
   let leftSum = 0;
 
@@ -44,4 +28,20 @@ function findFulcrum2(arr) {
   }
 
   return -1
+}
+
+function findFulcrum2(arr) {
+  for (let i = 1; i < arr.length - 1; i++) {
+    const currentNum = arr[i];
+
+    const leftSum = arr.slice(0, i)
+      .reduce((a, b) => a + b);
+
+    const rightSum = arr.slice(i + 1, arr.length)
+      .reduce((a, b) => a + b);
+
+    if (leftSum === rightSum) return currentNum;
+  }
+
+  return -1;
 }

@@ -47,10 +47,8 @@ function nextPermutationBest(nums) {
   }
 
   const firstPortion = nums.slice(0, index + 1);
-  console.log(firstPortion);
 
-  const secondPortion = nums.slice(index + 1);
-  secondPortion.reverse();
+  const secondPortion = nums.slice(index + 1).reverse();
 
   return firstPortion.concat(secondPortion);
 }

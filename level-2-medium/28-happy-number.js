@@ -26,7 +26,7 @@ function isHappy(n) {
 
 function getSumOfSquares(num) {
   let sum = 0;
-  while (num > 0) {
+  while (num >= 1) {
     const digit = num % 10;
     sum += digit * digit;
     num = Math.floor(num / 10);

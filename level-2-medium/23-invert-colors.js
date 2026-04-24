@@ -17,26 +17,7 @@
 const hexColor = '#123456';
 console.log(invertColor(hexColor));
 
-function invertColor(hexColor) {
-  const hexToDecimal = (hexNum) => parseInt(hexNum, 16);
 
-  const decimalToHex = (decNum) => decNum.toString(16);
-
-  let output = '#';
-  const chars = hexColor.split('');
-
-  for (let i = 1; i < chars.length - 1; i += 2) {
-    const hexNum = chars[i] + chars[i + 1];
-
-    const result = decimalToHex(255 - hexToDecimal(hexNum));
-
-    output += result;
-  }
-
-  return output;
-}
-
-/*
 function invertColor(hexColor) {
   const hexToDec = hex => parseInt(hex, 16);
   const decToHex = dec => dec.toString(16).padStart(2, '0');
@@ -57,5 +38,3 @@ function invertColor(hexColor) {
 console.log(invertColor("#123456")); // #EDCBA9
 console.log(invertColor("#FFFFFF")); // #000000
 console.log(invertColor("#000000")); // #FFFFFF
-
-*/

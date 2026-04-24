@@ -10,7 +10,7 @@ function getFirstNVowels(str, n) {
   let result = '';
   let count = 0;
 
-  for (char of str)
+  for (const char of str)
     if (count < n && vowels.includes(char)) {
       result += char;
       count++;

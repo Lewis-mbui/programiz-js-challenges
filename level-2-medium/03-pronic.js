@@ -5,6 +5,19 @@ is a pronic number because it is obtained by multiplying two consecutive integer
 */
 console.log(checkPronic(13));
 
+// OPTIMIZED
+ 
+function checkPronic(num) {
+  for (let i = 1; i * i <= num; i++) {
+    if (num % i === 0) {
+      if (num / i === i + 1) return 'Pronic'
+    }
+  }
+  
+  return 'Not Pronic';
+}
+
+
 /*
 function checkPronic(num) {
   for (let i = 1; i <= num; i++) {
@@ -17,23 +30,11 @@ function checkPronic(num) {
 }
 */
 
-
+/*
 function checkPronic(num) {
   return [...Array(num + 1).keys()]
     .reduce((found, number) => {
       return found || (number * (number + 1) === num);
     }, false) ? "Pronic" : "Not Pronic";
-}
-
-// OPTIMIZED
-/* 
-function checkPronic(num) {
-  for (let i = 1; i * i <= num; i++) {
-    if (num % i === 0) {
-      if (num / i === i + 1) return 'Pronic'
-    }
-  }
-  
-  return 'Not Pronic';
 }
 */

@@ -151,3 +151,29 @@ function findTrueEquations(equations) {
 
 //   return equations.filter(isTrueEquation);
 // }
+
+// function evaluate(expr) {
+//   // Remove spaces
+//   expr = expr.replace(/\s+/g, "");
+
+//   // Handle + and - (lowest precedence)
+//   let idx = expr.search(/[-+](?=[^()+\-*/]*$)/);
+//   if (idx > 0) {
+//     let op = expr[idx];
+//     return op === "+"
+//       ? evaluate(expr.slice(0, idx)) + evaluate(expr.slice(idx + 1))
+//       : evaluate(expr.slice(0, idx)) - evaluate(expr.slice(idx + 1));
+//   }
+
+//   // Handle * and /
+//   idx = expr.search(/[*/]/);
+//   if (idx > 0) {
+//     let op = expr[idx];
+//     return op === "*"
+//       ? evaluate(expr.slice(0, idx)) * evaluate(expr.slice(idx + 1))
+//       : evaluate(expr.slice(0, idx)) / evaluate(expr.slice(idx + 1));
+//   }
+
+//   // Base case: pure number
+//   return Number(expr);
+// }

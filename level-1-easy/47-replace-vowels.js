@@ -17,3 +17,7 @@ function replaceVowels(str, ch) {
 
   return result;
 }
+
+function replaceVowels(str, ch) {
+  return str.replace(/[aeiou]/gi, ch);
+}

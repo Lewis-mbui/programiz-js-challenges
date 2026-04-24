@@ -18,7 +18,7 @@ function convertToPascalCase(str) {
 function convertToPascalCase(str) {
   return str
     .toLowerCase()
-    .split(/[^a-z0-9]+/i)   // split by non-alphanumeric characters
+    .split(/[^a-z0-9]+/)   // split by non-alphanumeric characters
     .filter(Boolean)        // remove empty entries
     .map(word => word[0].toUpperCase() + word.slice(1))
     .join('');

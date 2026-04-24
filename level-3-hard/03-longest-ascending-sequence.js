@@ -1,7 +1,7 @@
 // Write a function to find the longest 
 // ascending sequence in an array.
-const arr = [1, 2, 3, 4, 2, 3, 4, 5]
-console.log(findLongestAscendingSequence(arr));
+const nums = [1, 2, 3, 4, 2, 3, 4, 5]
+console.log(findLongestAscendingSequence(nums));
 
 function findLongestAscendingSequence(arr) {
   let maxCount = 1;       // at least one element in a sequence

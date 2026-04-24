@@ -1,7 +1,7 @@
 // Write a function to find the smallest missing positive 
 // number from an array.
 // For example, in array [2, 3, 7, 6, 8, -1, -10, 15], the smallest
-// positive integer is 2. The nex smallest positive integer is 1,
+// positive integer is 2. The next smallest positive integer is 1,
 // which is missing from the array.
 // Return the smallest missing +ve number from the given array
 

@@ -25,7 +25,7 @@ function mergeAndSortArrays(array1, array2) {
 
   let n = output.length;
 
-  while (n > 0) {
+  while (n > 1) {
     for (let i = 0; i < n - 1; i++) {
       const current = output[i];
       const next = output[i + 1];

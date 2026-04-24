@@ -1,4 +1,5 @@
-// Write a function to find the maximum number of words from a given text that can be typed with a broken keyboard.
+// Write a function to find the maximum number of words from a given 
+// text that can be typed with a broken keyboard.
 const str = 'Coding in Javascript';
 const brokenLetter = 'C';
 

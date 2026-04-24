@@ -3,6 +3,29 @@
 const n = 65536;
 console.log(perfectIteratedSquares(n));
 
+
+function perfectIteratedSquares(n) {
+  if (!Number.isInteger(n) || n < 1) {
+    throw new Error("Input must be a positive integer.");
+  }
+
+  const result = [];
+
+  while (n > 1) {
+    const root = Math.sqrt(n);
+
+    // Stop if not a perfect square
+    if (!Number.isInteger(root)) break;
+
+    result.push(root);
+    n = root;
+  }
+
+  return result;
+}
+
+
+/*
 function perfectIteratedSquares(n) {
   const result = [];
 
@@ -21,27 +44,6 @@ function perfectIteratedSquares(n) {
 
     // Stop if we reach 1
     if (n === 1) break;
-  }
-
-  return result;
-}
-
-/*
-function perfectIteratedSquares(n) {
-  if (!Number.isInteger(n) || n < 1) {
-    throw new Error("Input must be a positive integer.");
-  }
-
-  const result = [];
-
-  while (n > 1) {
-    const root = Math.sqrt(n);
-
-    // Stop if not a perfect square
-    if (!Number.isInteger(root)) break;
-
-    result.push(root);
-    n = root;
   }
 
   return result;

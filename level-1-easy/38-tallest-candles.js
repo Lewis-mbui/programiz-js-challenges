@@ -9,7 +9,7 @@ function countTallestCandles(arr) {
   let count = 0;
   let tallest = 0;
 
-  for (candle of arr) {
+  for (const candle of arr) {
     if (candle > tallest) {
       tallest = candle;
       count = 1;
